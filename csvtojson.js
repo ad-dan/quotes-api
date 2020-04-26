@@ -18,3 +18,7 @@ const mappedQuotes = seperatedQuotes
     acc.push(curr);
     return acc;
   }, []);
+
+const quoteData = JSON.stringify(mappedQuotes);
+
+fs.writeFileSync('quotes.json', quoteData);
